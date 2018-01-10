@@ -51,14 +51,7 @@ void otb::Wrapper::ObjectsRadiometricStatistics::DoExecute()
 	m_OGRDataSourceRendering = OGRDataSourceToMapFilterType::New();
 	m_OGRDataSourceRendering->AddOGRDataSource(ogrDS);
 
-	m_OGRDataSourceRendering->SetOutputSize(referenceImage->GetLargestPossibleRegion().GetSize());
-	m_OGRDataSourceRendering->SetOutputOrigin(referenceImage->GetOrigin());
-
-	m_OGRDataSourceRendering->SetOutputSpacing(referenceImage->GetSpacing());
-
-	m_OGRDataSourceRendering->SetOutputProjectionRef(referenceImage->GetProjectionRef());
-
-	//	m_OGRDataSourceRendering->SetOutputParametersFromImage(referenceImage); // A tester
+	m_OGRDataSourceRendering->SetOutputParametersFromImage(referenceImage);
 
 	m_OGRDataSourceRendering->SetBackgroundValue(GetParameterInt("background"));
 	m_OGRDataSourceRendering->SetBurnAttributeMode(true);
