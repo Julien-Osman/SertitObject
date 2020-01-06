@@ -49,9 +49,9 @@ namespace otb
 
 			private:
 
-				void DoInit();
-				void DoUpdateParameters();
-				void DoExecute();
+				void DoInit() override;
+				void DoUpdateParameters() override;
+				void DoExecute() override;
 
 				ChangeLabelImageFilterType::Pointer m_ChangeLabelFilter;
 

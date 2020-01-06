@@ -33,9 +33,9 @@ namespace otb
 				itkTypeMacro(Self, otb::Application);
 
 			private:
-				void DoInit();
-				void DoUpdateParameters();
-				void DoExecute();
+				void DoInit() override;
+				void DoUpdateParameters() override;
+				void DoExecute() override;
 
 				// Base types
 				typedef float		   			    PixelType; 
