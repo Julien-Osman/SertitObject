@@ -9,7 +9,7 @@ void otb::Wrapper::ObjectsRadiometricStatistics::DoInit()
 	SetDocLimitations("None");
 	SetDocAuthors("Arnaud Durand");
 	SetDocSeeAlso("For now, support of input dataset with multiple layers having different projection reference system is limited.");
-	AddDocTag("FeatureExtraction");
+	AddDocTag("Feature Extraction");
 	AddDocTag("Radiometry");
 
 	AddParameter(ParameterType_InputFilename,  "in",   "Input vector dataset");
